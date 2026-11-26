@@ -1,34 +1,29 @@
-
-/* ==========================================
-   DATA SPACE — MODERN LANDING PAGE
-   ROYAL PURPLE / LAVENDER / WHITE
-========================================== */
-
 :root {
-    --primary: #17213A;
-    --secondary: #4B0082;
-    --accent: #D8B4FE;
-    --accent-dark: #6A0DAD;
+    --primary: #17213a;
+    --secondary: #4b0082;
+    --accent: #d8b4fe;
+    --accent-dark: #6a0dad;
 
-    --white: #FFFFFF;
-    --background: #F7F3FC;
-    --surface: #EDE5F7;
+    --white: #ffffff;
+    --background: #f7f3fc;
+    --surface: #ede5f7;
 
-    --text: #25213A;
-    --muted: #716A80;
+    --text: #25213a;
+    --muted: #716a80;
 
-    --border: #E4D9F0;
-    --shadow: 0 20px 55px rgba(75, 0, 130, 0.10);
+    --border: #e4d9f0;
+    --shadow: 0 20px 55px rgba(75, 0, 130, 0.1);
 }
-
-/* ==========================================
-   GLOBAL STYLES
-========================================== */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+main {
+    max-width: none;
+    padding: 0;
 }
 
 html {
@@ -39,7 +34,7 @@ html {
 body {
     background: var(--white);
     color: var(--text);
-    font-family: 'DM Sans', sans-serif;
+    font-family: "DM Sans", sans-serif;
     line-height: 1.7;
     overflow-x: hidden;
 }
@@ -47,7 +42,7 @@ body {
 a {
     color: inherit;
     text-decoration: none;
-    transition: .3s ease;
+    transition: 0.3s ease;
 }
 
 button,
@@ -70,10 +65,6 @@ a:focus-visible {
     color: var(--primary);
 }
 
-/* ==========================================
-   NAVIGATION
-========================================== */
-
 .navbar {
     min-height: 88px;
     padding: 15px 8%;
@@ -83,7 +74,7 @@ a:focus-visible {
     justify-content: space-between;
     gap: 25px;
 
-    background: rgba(255, 255, 255, .96);
+    background: rgba(255, 255, 255, 0.96);
     border-bottom: 1px solid var(--border);
 
     position: sticky;
@@ -142,7 +133,7 @@ a:focus-visible {
     height: 2px;
 
     background: var(--accent-dark);
-    transition: width .3s ease;
+    transition: width 0.3s ease;
 }
 
 .navbar nav a:hover {
@@ -171,10 +162,6 @@ a:focus-visible {
     transform: translateY(-2px);
 }
 
-/* ==========================================
-   COMMON ELEMENTS
-========================================== */
-
 section {
     scroll-margin-top: 100px;
 }
@@ -198,7 +185,7 @@ h4 {
 }
 
 h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
     font-weight: 500;
     font-size: clamp(38px, 4.5vw, 58px);
     line-height: 1.2;
@@ -219,15 +206,15 @@ h2 em {
     color: var(--white);
     font-size: 11px;
     font-weight: 700;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
 
-    transition: .3s ease;
+    transition: 0.3s ease;
 }
 
 .primary-button:hover {
     background: var(--secondary);
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(75, 0, 130, .15);
+    box-shadow: 0 10px 25px rgba(75, 0, 130, 0.15);
 }
 
 .secondary-link,
@@ -248,10 +235,6 @@ h2 em {
     color: var(--accent-dark);
 }
 
-/* ==========================================
-   HERO SECTION
-========================================== */
-
 .hero {
     min-height: 680px;
     padding: 85px 8%;
@@ -261,13 +244,7 @@ h2 em {
     align-items: center;
     gap: 55px;
 
-    background:
-        radial-gradient(
-            ellipse at 85% 45%,
-            rgba(106, 13, 173, .15),
-            transparent 55%
-        ),
-        var(--background);
+    background: radial-gradient(ellipse at 85% 45%, rgba(106, 13, 173, 0.15), transparent 55%), var(--background);
 
     overflow: hidden;
 }
@@ -279,7 +256,7 @@ h2 em {
 .hero h1 {
     margin: 30px 0 25px;
 
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
     font-size: clamp(46px, 4.7vw, 68px);
     font-weight: 500;
     line-height: 1.12;
@@ -327,10 +304,6 @@ h2 em {
     background: var(--accent-dark);
 }
 
-/* ==========================================
-   PLATFORM PREVIEW
-========================================== */
-
 .hero-visual {
     min-width: 0;
     overflow: hidden;
@@ -341,12 +314,14 @@ h2 em {
 
     box-shadow: var(--shadow);
 
-    transition: transform .4s ease, box-shadow .4s ease;
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
 }
 
 .hero-visual:hover {
     transform: translateY(-5px);
-    box-shadow: 0 28px 65px rgba(75, 0, 130, .16);
+    box-shadow: 0 28px 65px rgba(75, 0, 130, 0.16);
 }
 
 .preview-topbar,
@@ -382,7 +357,7 @@ h2 em {
     background: var(--primary);
     color: var(--white);
 
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
     font-size: 20px;
 }
 
@@ -428,7 +403,7 @@ h2 em {
 }
 
 .sidebar-item.active {
-    background: #E8DDF5;
+    background: #e8ddf5;
     color: var(--primary);
     font-weight: 700;
 }
@@ -460,7 +435,7 @@ h2 em {
 .preview-welcome h3 {
     margin: 7px 0;
 
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
     font-size: 22px;
     font-weight: 500;
 }
@@ -485,7 +460,7 @@ h2 em {
     background: var(--background);
     border: 1px solid var(--border);
 
-    transition: background .3s ease;
+    transition: background 0.3s ease;
 }
 
 .stat-card:hover {
@@ -497,7 +472,7 @@ h2 em {
     margin: 9px 0;
 
     color: var(--primary);
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
     font-size: 27px;
 }
 
@@ -517,7 +492,7 @@ h2 em {
 .chart-heading h4 {
     margin-top: 6px;
 
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
     font-size: 15px;
     font-weight: 500;
 }
@@ -536,12 +511,7 @@ h2 em {
 .chart-bars div {
     flex: 1;
 
-    background: linear-gradient(
-        to top,
-        #4B0082,
-        #6A0DAD,
-        #D8B4FE
-    );
+    background: linear-gradient(to top, #4b0082, #6a0dad, #d8b4fe);
 
     border-radius: 3px 3px 0 0;
 }
@@ -605,10 +575,6 @@ h2 em {
     letter-spacing: 1px;
 }
 
-/* ==========================================
-   BRAND STATEMENT
-========================================== */
-
 .brand-statement {
     padding: 23px 8%;
 
@@ -624,10 +590,6 @@ h2 em {
     font-weight: 700;
     letter-spacing: 2px;
 }
-
-/* ==========================================
-   ABOUT SECTION
-========================================== */
 
 .about {
     display: grid;
@@ -649,7 +611,7 @@ h2 em {
     margin-bottom: 22px;
 
     color: var(--primary);
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
     font-size: 23px;
     line-height: 1.5;
 }
@@ -661,10 +623,6 @@ h2 em {
     font-size: 13px;
     line-height: 2.1;
 }
-
-/* ==========================================
-   FEATURES SECTION
-========================================== */
 
 .features {
     background: var(--background);
@@ -707,7 +665,7 @@ h2 em {
     border: 1px solid var(--border);
 
     overflow: hidden;
-    transition: .3s ease;
+    transition: 0.3s ease;
 }
 
 .feature-card::before {
@@ -720,7 +678,7 @@ h2 em {
     height: 3px;
 
     background: var(--accent-dark);
-    transition: width .35s ease;
+    transition: width 0.35s ease;
 }
 
 .feature-card:hover {
@@ -738,7 +696,7 @@ h2 em {
     top: 20px;
     right: 20px;
 
-    color: #B6A9C5;
+    color: #b6a9c5;
     font-size: 10px;
     font-weight: 700;
 }
@@ -755,7 +713,7 @@ h2 em {
     color: var(--secondary);
 
     font-size: 23px;
-    transition: .3s ease;
+    transition: 0.3s ease;
 }
 
 .feature-card:hover .feature-icon {
@@ -767,7 +725,7 @@ h2 em {
 .feature-card h3 {
     margin-bottom: 12px;
 
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
     font-size: 19px;
     font-weight: 600;
 }
@@ -777,10 +735,6 @@ h2 em {
     font-size: 11px;
     line-height: 1.9;
 }
-
-/* ==========================================
-   TECHNICAL FOUNDATION
-========================================== */
 
 #technical-foundation {
     background: var(--surface);
@@ -801,13 +755,9 @@ h2 em {
     font-size: 21px;
 }
 
-/* ==========================================
-   HOW DATA SPACE WORKS
-========================================== */
-
 .workflow {
     display: grid;
-    grid-template-columns: .9fr 1.1fr;
+    grid-template-columns: 0.9fr 1.1fr;
     align-items: center;
     gap: 65px;
 
@@ -845,7 +795,7 @@ h2 em {
     background: var(--background);
     border: 1px solid var(--border);
 
-    transition: .3s ease;
+    transition: 0.3s ease;
 }
 
 .technology-item > span {
@@ -859,7 +809,7 @@ h2 em {
 
 .technology-item strong {
     color: var(--primary);
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
     font-size: 25px;
 }
 
@@ -874,8 +824,6 @@ h2 em {
     box-shadow: var(--shadow);
 }
 
-/* Workflow-specific styling */
-
 .workflow .technology-item {
     background: var(--white);
     border-left: 3px solid var(--accent-dark);
@@ -885,13 +833,9 @@ h2 em {
     font-size: 27px;
 }
 
-/* ==========================================
-   TECHNOLOGY STACK
-========================================== */
-
 .development {
     display: grid;
-    grid-template-columns: .9fr 1.1fr;
+    grid-template-columns: 0.9fr 1.1fr;
     align-items: center;
     gap: 65px;
 
@@ -905,10 +849,6 @@ h2 em {
 .development .technology-item:hover {
     background: var(--surface);
 }
-
-/* ==========================================
-   CALL TO ACTION
-========================================== */
 
 .contact {
     position: relative;
@@ -933,12 +873,8 @@ h2 em {
 
 .contact .primary-button {
     padding: 18px 32px;
-    box-shadow: 0 10px 25px rgba(75, 0, 130, .12);
+    box-shadow: 0 10px 25px rgba(75, 0, 130, 0.12);
 }
-
-/* ==========================================
-   FOOTER
-========================================== */
 
 footer {
     padding: 55px 8% 25px;
@@ -963,13 +899,13 @@ footer .logo span {
 }
 
 footer .logo small {
-    color: #D8C5EB;
+    color: #d8c5eb;
 }
 
 .footer-main p {
     margin-top: 10px;
 
-    color: #D0C5DC;
+    color: #d0c5dc;
     font-size: 11px;
 }
 
@@ -980,7 +916,7 @@ footer .logo small {
 }
 
 .footer-links a {
-    color: #E6DDF0;
+    color: #e6ddf0;
     font-size: 10px;
 }
 
@@ -1008,19 +944,14 @@ footer .logo small {
     justify-content: space-between;
     gap: 15px;
 
-    border-top: 1px solid rgba(255, 255, 255, .16);
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
 
-    color: #D0C5DC;
+    color: #d0c5dc;
     font-size: 8px;
     letter-spacing: 1px;
 }
 
-/* ==========================================
-   TABLET RESPONSIVENESS
-========================================== */
-
 @media (max-width: 1100px) {
-
     .hero {
         grid-template-columns: 1fr;
         gap: 55px;
@@ -1046,12 +977,7 @@ footer .logo small {
     }
 }
 
-/* ==========================================
-   SMALL TABLETS
-========================================== */
-
 @media (max-width: 750px) {
-
     .navbar {
         padding: 15px 5%;
         flex-wrap: wrap;
@@ -1118,12 +1044,7 @@ footer .logo small {
     }
 }
 
-/* ==========================================
-   MOBILE RESPONSIVENESS
-========================================== */
-
 @media (max-width: 500px) {
-
     .logo {
         font-size: 19px;
     }
@@ -1238,21 +1159,8 @@ footer .logo small {
     }
 }
 
-/* ==========================================
-   REDUCED MOTION ACCESSIBILITY
-========================================== */
-
 @media (prefers-reduced-motion: reduce) {
-
     html {
         scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
-        transition-duration: .01ms !important;
-        animation-duration: .01ms !important;
-        animation-iteration-count: 1 !important;
     }
 }
