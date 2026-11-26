@@ -1,28 +1,10 @@
-:root {
-    --primary: #17213a;
-    --secondary: #4b0082;
-    --accent: #d8b4fe;
-    --accent-dark: #6a0dad;
-
-    --white: #ffffff;
-    --background: #f7f3fc;
-    --surface: #ede5f7;
-
-    --text: #25213a;
-    --muted: #716a80;
-
-    --border: #e4d9f0;
-    --shadow: 0 20px 55px rgba(75, 0, 130, 0.1);
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* AI HERE: sheet applies to the whole document, scope it under .landing when a second page needs its own frame. */
-main {
+main.landing {
     max-width: none;
     padding: 0;
 }
@@ -161,6 +143,44 @@ a:focus-visible {
 .nav-button:hover {
     background: var(--secondary);
     transform: translateY(-2px);
+}
+
+.auth-slot {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.auth-email {
+    max-width: 170px;
+    overflow: hidden;
+
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.auth-signout {
+    padding: 0 0 6px;
+
+    background: none;
+    border: 0;
+    border-bottom: 1px solid var(--accent-dark);
+
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+
+    cursor: pointer;
+}
+
+.auth-signout:hover {
+    color: var(--accent-dark);
 }
 
 section {
@@ -986,6 +1006,10 @@ footer .logo small {
         font-size: 8px;
     }
 
+    .auth-slot {
+        gap: 12px;
+    }
+
     .hero {
         min-height: auto;
         padding: 70px 6%;
@@ -1042,6 +1066,11 @@ footer .logo small {
 
     .navbar nav a {
         font-size: 8px;
+    }
+
+    .auth-email {
+        max-width: 96px;
+        font-size: 9px;
     }
 
     .hero {

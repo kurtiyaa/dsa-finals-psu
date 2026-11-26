@@ -9,11 +9,14 @@ export function start(target, table) {
 
     const render = () => {
         const view = routes.get(location.pathname) ?? routes.get("*");
-        try {
-            view.mount(target);
-        } catch (error) {
+        const fail = (error) => {
             console.error("[router]", error);
             target.innerHTML = "<main><h1>Something broke</h1><p>Reload the page.</p></main>";
+        };
+        try {
+            Promise.resolve(view.mount(target)).catch(fail);
+        } catch (error) {
+            fail(error);
         }
     };
 
