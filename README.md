@@ -76,10 +76,10 @@ frontend/src/
   shared/api.js            the only place that calls /api
   shared/router.js         link interception, 404 fallback, error frame
   styles/base.css          reset and page frame, shared by every page
-  features/home/           one folder per page
+  features/landing/        one folder per page
 ```
 
-To add a page, copy `features/home`, rename the folder, edit its `.html`, then point a path at it in `main.js`. A feature exports `mount(el)`, keeps its own `.css` beside the `.js`, and imports markup with `import html from "./page.html?raw"`. That file is a fragment, so opening it in a browser directly shows it unstyled, which is expected.
+To add a page, copy `features/landing`, rename the folder, edit its `.html`, then point a path at it in `main.js`. A feature exports `mount(el)`, keeps its own `.css` beside the `.js`, and imports markup with `import html from "./page.html?raw"`. That file is a fragment, so opening it in a browser directly shows it unstyled, which is expected.
 
 ## Docker and Makefile
 
