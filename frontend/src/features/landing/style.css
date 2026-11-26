@@ -21,6 +21,7 @@
     box-sizing: border-box;
 }
 
+/* AI HERE: sheet applies to the whole document, scope it under .landing when a second page needs its own frame. */
 main {
     max-width: none;
     padding: 0;
@@ -833,23 +834,6 @@ h2 em {
     font-size: 27px;
 }
 
-.development {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    align-items: center;
-    gap: 65px;
-
-    background: var(--background);
-}
-
-.development .technology-item {
-    background: var(--white);
-}
-
-.development .technology-item:hover {
-    background: var(--surface);
-}
-
 .contact {
     position: relative;
     overflow: hidden;
@@ -970,8 +954,7 @@ footer .logo small {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .workflow,
-    .development {
+    .workflow {
         grid-template-columns: 1fr;
         gap: 40px;
     }
