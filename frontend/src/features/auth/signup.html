@@ -1,0 +1,47 @@
+<main class="auth-page">
+    <section class="auth-card">
+
+        <a href="/" class="auth-back">← Back to home</a>
+
+        <a href="/" class="auth-brand">DATA<span>SPACE.</span></a>
+
+        <h1>Create account</h1>
+
+        <p class="auth-intro">
+            Pick a password with at least 8 characters.
+        </p>
+
+        <form class="auth-form">
+
+            <div class="auth-field">
+
+                <label for="email">Email</label>
+
+                <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+
+                <p class="auth-error" role="alert" id="email-error"></p>
+
+            </div>
+
+            <div class="auth-field">
+
+                <label for="password">Password</label>
+
+                <input id="password" name="password" type="password" autocomplete="new-password" minlength="8" maxlength="72" required aria-describedby="password-error">
+
+                <p class="auth-error" role="alert" id="password-error"></p>
+
+            </div>
+
+            <p class="auth-error" role="alert" id="form-error"></p>
+
+            <button type="submit">Create account</button>
+
+        </form>
+
+        <p class="auth-switch">
+            Already have an account? <a href="/signin">Sign in</a>
+        </p>
+
+    </section>
+</main>

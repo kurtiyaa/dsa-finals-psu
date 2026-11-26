@@ -145,6 +145,44 @@ a:focus-visible {
     transform: translateY(-2px);
 }
 
+.auth-slot {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.auth-email {
+    max-width: 170px;
+    overflow: hidden;
+
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.auth-signout {
+    padding: 0 0 6px;
+
+    background: none;
+    border: 0;
+    border-bottom: 1px solid var(--accent-dark);
+
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+
+    cursor: pointer;
+}
+
+.auth-signout:hover {
+    color: var(--accent-dark);
+}
+
 section {
     scroll-margin-top: 100px;
 }
@@ -968,6 +1006,10 @@ footer .logo small {
         font-size: 8px;
     }
 
+    .auth-slot {
+        gap: 12px;
+    }
+
     .hero {
         min-height: auto;
         padding: 70px 6%;
@@ -1024,6 +1066,11 @@ footer .logo small {
 
     .navbar nav a {
         font-size: 8px;
+    }
+
+    .auth-email {
+        max-width: 96px;
+        font-size: 9px;
     }
 
     .hero {
